@@ -1,0 +1,26 @@
+
+/* SectionLink styling */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: 0.125rem 0;
+  border-bottom: none;
+  transition: color var(--transition-fast), opacity var(--transition-fast), transform var(--transition-default);
+}
+}
+
+.section-link:hover {
+  color: var(--color-accent-hover);
+  opacity: 0.9;
+  transform: translate(3px, -3px);
+}
+
+/* Remove icon‑only hover – the whole link now moves */
+/* .section-link:hover .section-link__icon { */
+/*   transform: translate(3px, -3px); */
+/* } */

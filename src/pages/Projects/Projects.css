@@ -1,0 +1,210 @@
+/* ─── Intro ─────────────────────────────────────── */
+
+.projects-intro {
+  padding-bottom: var(--spacing-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.projects-intro__desc {
+  margin-top: var(--spacing-6);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  max-width: 52ch;
+}
+
+/* ─── Catalog ────────────────────────────────────── */
+
+.projects-catalog {
+  padding-top: 0;
+}
+
+.projects-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Project entry ──────────────────────────────── */
+
+.project-entry {
+  padding-block: var(--spacing-8);
+  padding-inline: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-entry:last-child {
+  border-bottom: none;
+}
+
+/* Header: 인덱스 + 제목 */
+.project-entry__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.project-entry__index {
+  flex-shrink: 0;
+  color: var(--color-accent);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+}
+
+.project-entry__title {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+  line-height: var(--line-height-tight);
+}
+
+/* Body: 좌·우 2컬럼 */
+.project-entry__body {
+  display: grid;
+  grid-template-columns: minmax(10rem, 15rem) 1fr;
+  gap: var(--spacing-8);
+  align-items: start; /* 좌·우 블록 모두 상단 정렬 */
+}
+
+/* ─── 좌측 영역 ──────────────────────────────────── */
+
+.project-entry__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+/* Meta: 기간 / 역할 / 상태 */
+.project-entry__meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-1) var(--spacing-4);
+  align-content: start;
+  margin: 0;
+}
+
+.project-entry__meta dt {
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-top: 0.15em;
+}
+
+.project-entry__meta dd {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+/* Highlights */
+.project-entry__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.project-entry__highlights-label {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.project-entry__highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.project-entry__highlights-item {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* ─── 우측 영역 ──────────────────────────────────── */
+
+.project-entry__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  /* 상단 마진·패딩 없음 – 좌측 메타 상단과 수평 정렬 */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* 설명글 */
+.project-entry__desc {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* 기술스택 */
+.project-entry__tech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2) var(--spacing-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-entry__tech-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* 링크 */
+.project-entry__links {
+  display: flex;
+  gap: var(--spacing-5);
+}
+
+.project-entry__link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  color: var(--color-accent);
+  transition: color var(--transition-fast);
+}
+
+.project-entry__link:hover {
+  color: var(--color-accent-hover);
+}
+
+/* ─── Responsive ─────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .project-entry__body {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .project-entry {
+    padding-block: var(--spacing-6);
+    padding-inline: var(--spacing-2);
+  }
+
+  .project-entry__header {
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+  }
+}

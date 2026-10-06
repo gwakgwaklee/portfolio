@@ -1,0 +1,85 @@
+.profile-section {
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-section__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--spacing-7);
+}
+
+.profile-section__heading,
+.profile-section__content {
+  display: grid;
+  align-content: start;
+  gap: var(--spacing-4);
+}
+
+.profile-section__introduction {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.profile-section__details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-4);
+  margin: var(--spacing-3) 0 0;
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-section__details div {
+  display: grid;
+  gap: var(--spacing-1);
+}
+
+.profile-section__details dt {
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+}
+
+.profile-section__details dd {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.profile-section__interests {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-section__interests > p {
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+}
+
+.profile-section__interests ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-section__interests li {
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 640px) {
+  .profile-section__layout,
+  .profile-section__details {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-5);
+  }
+}
