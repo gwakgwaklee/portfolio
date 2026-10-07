@@ -26,6 +26,24 @@ const experience = [
     startDate: '2024-07',
     endDate: '2024-12',
   },
+  {
+    id: 4,
+    type: 'work',
+    organization: 'Example company Inc',
+    title: 'Front-end Developer',
+    description: '앱 프론트엔드 개발을 담당했습니다.',
+    startDate: '2025-07',
+    endDate: '2025-12',
+  },
+  {
+    id: 5,
+    type: 'work',
+    organization: 'Example company Inc',
+    title: 'Front-end Developer',
+    description: '앱  개발을 담당했습니다.',
+    startDate: '2026-01',
+    endDate: '2026-06',
+  },
 ]
 
 export default experience

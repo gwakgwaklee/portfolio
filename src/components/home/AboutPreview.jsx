@@ -13,7 +13,7 @@ function AboutPreview() {
           <h2 id="about-title">{profile.name}에 대해</h2>
           <p>{profile.introduction}</p>
           <p className="about-preview__location">Based in {profile.location}</p>
-          <SectionLink to="/about">About 페이지 이동 →</SectionLink>
+          <SectionLink to="/about">ABOUT</SectionLink>
         </div>
       </div>
     </section>

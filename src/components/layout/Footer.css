@@ -12,7 +12,7 @@
   font-size: var(--font-size-sm);
 }
 
-.site-footer a {
+.site-footer .section-link {
   font-size: inherit;
 }
 

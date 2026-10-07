@@ -30,6 +30,11 @@
   font-size: var(--font-size-sm);
 }
 
+.about-preview__copy .section-link {
+  justify-self: end;
+  margin-top: var(--spacing-3);
+}
+
 @media (max-width: 640px) {
   .about-preview__content {
     grid-template-columns: 1fr;
@@ -37,5 +42,9 @@
 
   .about-preview__image {
     width: min(100%, 14rem);
+  }
+
+  .about-preview__copy .section-link {
+    justify-self: start;
   }
 }

@@ -24,21 +24,14 @@
   color: var(--color-text-muted);
 }
 
+.contact-preview__details .section-link {
+  justify-self: end;
+  margin-top: var(--spacing-3);
+}
+
 .contact-preview__email {
   width: fit-content;
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-medium);
-}
-
-.contact-preview__email::after {
-  display: inline-block;
-  margin-left: var(--spacing-2);
-  content: '↗';
-  transition: transform var(--transition-fast);
-}
-
-.contact-preview__email:hover::after {
-  transform: translate(var(--spacing-1), calc(var(--spacing-1) * -1));
 }
 
 .contact-preview__links {
@@ -64,5 +57,9 @@
   .contact-preview__content {
     grid-template-columns: 1fr;
     gap: var(--spacing-5);
+  }
+
+  .contact-preview__details .section-link {
+    justify-self: start;
   }
 }

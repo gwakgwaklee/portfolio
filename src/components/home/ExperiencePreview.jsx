@@ -3,7 +3,6 @@ import experience from '../../mock/experience';
 import './ExperiencePreview.css'
 
 function ExperiencePreview() {
-  const recent = experience.slice(0, 2)
   return (
     <section
       id="experience"
@@ -16,8 +15,8 @@ function ExperiencePreview() {
           <p className="section-label" data-section-number="05">Experience</p>
           <h2 id="experience-title">학습과 경험</h2>
         </div>
-        <ol className="experience-preview__list">
-          {recent.map((item) => (
+        <ol className={`experience-preview__list${experience.length > 3 ? ' experience-preview__list--scrollable' : ''}`}>
+          {experience.map((item) => (
             <li key={item.id} className="experience-item">
               <p className="experience-item__period">
                 {item.startDate} — {item.endDate}
@@ -31,7 +30,7 @@ function ExperiencePreview() {
           ))}
         </ol>
         <div className="experience-preview__footer">
-            <SectionLink to="/experience">전체 경력 보기 →</SectionLink>
+            <SectionLink to="/experience">EXPERIENCE</SectionLink>
         </div>
       </div>
     </section>

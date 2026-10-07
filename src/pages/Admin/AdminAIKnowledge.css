@@ -1,0 +1,6 @@
+.admin-ai-section { margin-top: var(--spacing-8); }
+.admin-ai-section > h2 { display: flex; align-items: baseline; gap: var(--spacing-3); }
+.admin-ai-section > h2 span { color: var(--color-text-muted); font-family: var(--font-family-mono); font-size: var(--font-size-xs); font-weight: var(--font-weight-regular); }
+.admin-ai-section .admin-list__row > div:first-child { min-width: 0; flex: 1 1 20rem; }
+.admin-ai-section .admin-list__row p { overflow-wrap: anywhere; }
+.admin-ai-section .admin-ai-date { font-size: var(--font-size-xs); }

@@ -1,0 +1,113 @@
+.archive-viewer {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-4);
+  background: rgb(22 27 34 / 76%);
+}
+
+.archive-viewer__panel {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 92rem);
+  height: min(100%, 56rem);
+  min-height: 0;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+}
+
+.archive-viewer__header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-5);
+  align-items: flex-start;
+  padding: var(--spacing-5) var(--spacing-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.archive-viewer__type,
+.project-archive__type {
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.archive-viewer__type {
+  margin-bottom: var(--spacing-1);
+}
+
+.archive-viewer__close {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-height: 2.5rem;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  background: var(--color-background);
+  cursor: pointer;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+}
+
+.archive-viewer__close:hover,
+.archive-viewer__close:active {
+  border-color: var(--color-accent);
+  color: var(--color-accent-hover);
+}
+
+.archive-viewer__close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.archive-viewer__close > span:first-child {
+  font-family: var(--font-family-base);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.archive-viewer__media {
+  display: grid;
+  flex: 1;
+  min-height: 0;
+  background: var(--color-surface);
+}
+
+.archive-viewer__media iframe,
+.archive-viewer__media video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.archive-viewer__media video {
+  align-self: center;
+  max-height: 100%;
+  background: #161b22;
+}
+
+@media (max-width: 640px) {
+  .archive-viewer {
+    padding: 0;
+  }
+
+  .archive-viewer__panel {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .archive-viewer__header {
+    padding: var(--spacing-4);
+  }
+
+  .archive-viewer__close-label {
+    display: none;
+  }
+}

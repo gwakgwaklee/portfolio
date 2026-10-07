@@ -2,6 +2,7 @@ import profile from '../../mock/profile'
 import './Header.css'
 
 const navigationItems = [
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Skills', href: '/skills' },
   { label: 'Projects', href: '/projects' },

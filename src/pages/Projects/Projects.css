@@ -173,19 +173,8 @@
 /* 링크 */
 .project-entry__links {
   display: flex;
-  gap: var(--spacing-5);
-}
-
-.project-entry__link {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  text-decoration: none;
-  color: var(--color-accent);
-  transition: color var(--transition-fast);
-}
-
-.project-entry__link:hover {
-  color: var(--color-accent-hover);
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
 }
 
 /* ─── Responsive ─────────────────────────────────── */

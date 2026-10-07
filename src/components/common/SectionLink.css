@@ -1,26 +1,34 @@
 
-/* SectionLink styling */
 .section-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  justify-content: center;
+  gap: var(--spacing-2);
+  min-height: 2.5rem;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-background);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--color-accent);
+  color: var(--color-heading);
   text-decoration: none;
-  padding: 0.125rem 0;
-  border-bottom: none;
-  transition: color var(--transition-fast), opacity var(--transition-fast), transform var(--transition-default);
-}
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
 .section-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-surface);
   color: var(--color-accent-hover);
-  opacity: 0.9;
-  transform: translate(3px, -3px);
+  transform: translateY(-1px);
 }
 
-/* Remove icon‑only hover – the whole link now moves */
-/* .section-link:hover .section-link__icon { */
-/*   transform: translate(3px, -3px); */
-/* } */
+.section-link:active {
+  background: var(--color-surface);
+  transform: translateY(0);
+}
+
+.section-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}

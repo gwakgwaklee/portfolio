@@ -12,20 +12,14 @@ function SkillsPreview() {
         </div>
         <div className="skills-preview__list">
           {skills.map((skillGroup) => (
-            <div
-              key={skillGroup.id}
-              className={
-                "skills-preview__group" +
-                (skillGroup.category === "DevOps" ? " no-left-border" : "")
-              }
-            >
+            <div key={skillGroup.id} className="skills-preview__group">
               <h3>{skillGroup.category}</h3>
               <p>{skillGroup.items.join(' · ')}</p>
             </div>
           ))}
         </div>
         <div className="skills-preview__footer">
-            <SectionLink to="/skills">전체 기술 보기 →</SectionLink>
+            <SectionLink to="/skills">SKILLS</SectionLink>
         </div>
       </div>
     </section>

@@ -3,21 +3,20 @@ import SectionLink from '../../components/common/SectionLink';
 import './ProjectsPreview.css'
 
 function ProjectsPreview() {
-  const recentProjects = projects.slice(0, 2)
-
   return (
     <section
       id="projects"
       className="projects-preview section"
       aria-labelledby="projects-preview-title"
+      data-section-number="04"
     >
       <div className="container">
         <div className="projects-preview__heading">
           <p className="section-label" data-section-number="04">Projects</p>
           <h2 id="projects-preview-title">최근 프로젝트</h2>
         </div>
-        <ol className="projects-preview__list">
-          {recentProjects.map((project, index) => (
+        <ol className={`projects-preview__list${projects.length > 3 ? ' projects-preview__list--scrollable' : ''}`}>
+          {projects.map((project, index) => (
             <li key={project.id} className="projects-preview__item">
               <span className="projects-preview__index">
                 {String(index + 1).padStart(2, '0')}
@@ -40,7 +39,7 @@ function ProjectsPreview() {
           ))}
         </ol>
         <div className="projects-preview__footer">
-            <SectionLink to="/projects">프로젝트 보러가기 →</SectionLink>
+            <SectionLink to="/projects">PROJECTS</SectionLink>
         </div>
       </div>
     </section>
