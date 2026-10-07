@@ -12,8 +12,8 @@ function ContactPreview() {
         </div>
         <div className="contact-preview__details">
           <p>{contact.message}</p>
-          <a className="contact-preview__email" href={`mailto:${contact.email}`}>{contact.email}</a>
-          <SectionLink to="/contact">연락하기 →</SectionLink>
+          <SectionLink className="contact-preview__email" to={`mailto:${contact.email}`} icon="external">{contact.email}</SectionLink>
+          <SectionLink to="/contact">CONTACT</SectionLink>
         </div>
       </div>
     </section>

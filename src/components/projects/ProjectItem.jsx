@@ -1,5 +1,6 @@
 import React from "react";
 import SkillIcon from "../../components/skills/SkillIcon";
+import SectionLink from "../../components/common/SectionLink";
 
 function ProjectItem({ project, index, getTechIcon }) {
   return (
@@ -80,22 +81,14 @@ function ProjectItem({ project, index, getTechIcon }) {
             </ul>
           )}
 
-          {(project.links.githubUrl || project.links.detailUrl || project.links.deployUrl) && (
+          {project.id && (
             <div className="project-entry__links">
               {project.links.githubUrl && (
-                <a href={project.links.githubUrl} target="_blank" rel="noreferrer" className="project-entry__link">
-                  GitHub ↗
-                </a>
+                <SectionLink to={project.links.githubUrl} target="_blank" rel="noreferrer" icon="external">GitHub</SectionLink>
               )}
-              {project.links.detailUrl && (
-                <a href={project.links.detailUrl} target="_blank" rel="noreferrer" className="project-entry__link">
-                  자세히 보기 ↗
-                </a>
-              )}
+              <SectionLink to={`/projects/${project.id}`}>자세히 보기</SectionLink>
               {project.links.deployUrl && (
-                <a href={project.links.deployUrl} target="_blank" rel="noreferrer" className="project-entry__link">
-                  배포 사이트 ↗
-                </a>
+                <SectionLink to={project.links.deployUrl} target="_blank" rel="noreferrer" icon="external">배포 사이트</SectionLink>
               )}
             </div>
           )}

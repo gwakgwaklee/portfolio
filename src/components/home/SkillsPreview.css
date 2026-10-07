@@ -9,9 +9,14 @@
   margin-bottom: var(--spacing-6);
 }
 
+.skills-preview__footer {
+  display: flex;
+  margin-top: var(--spacing-5);
+}
+
 .skills-preview__list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--color-border);
 }
 
@@ -38,6 +43,16 @@
   content: '';
 }
 
+@media (max-width: 800px) {
+  .skills-preview__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skills-preview__group:nth-child(odd) {
+    border-left: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .skills-preview__list {
     grid-template-columns: 1fr;
@@ -46,9 +61,4 @@
   .skills-preview__group + .skills-preview__group {
     border-left: 0;
   }
-}
-
-/* Remove left border for DevOps group */
-.skills-preview__group.no-left-border {
-  border-left: none;
 }

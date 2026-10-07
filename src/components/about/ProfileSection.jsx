@@ -1,5 +1,6 @@
 import profile from '../../mock/profile'
 import skills from '../../mock/skills'
+import SectionLink from '../common/SectionLink'
 import './ProfileSection.css'
 
 function ProfileSection() {
@@ -24,7 +25,7 @@ function ProfileSection() {
             <div>
               <dt>Email</dt>
               <dd>
-                <a href={`mailto:${profile.email}`}>{profile.email}</a>
+                <SectionLink to={`mailto:${profile.email}`} icon="external">{profile.email}</SectionLink>
               </dd>
             </div>
           </dl>

@@ -12,7 +12,7 @@ function Hero() {
           <p className="hero__name">{profile.name}</p>
           <h1 id="hero-title">{profile.headline}</h1>
           <p className="hero__introduction">{profile.introduction}</p>
-          <SectionLink to="/contact">함께 이야기하기</SectionLink>
+          <SectionLink to="/contact">CONTACT</SectionLink>
         </div>
         <aside className="hero__aside" aria-label="프로필 요약">
           <div className="hero__metadata">

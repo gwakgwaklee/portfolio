@@ -1,6 +1,7 @@
 import Header from '../../components/layout/Header'
 import Footer from '../../components/layout/Footer'
 import contact from '../../mock/contact'
+import SectionLink from '../../components/common/SectionLink'
 import './Contact.css'
 
 function Contact() {
@@ -27,12 +28,12 @@ function Contact() {
             <ul className="contact-info__list">
               <li className="contact-info__item">
                 <span className="contact-info__label">EMAIL</span>
-                <a href={`mailto:${contact.email}`} className="contact-info__value">{contact.email}</a>
+                <SectionLink to={`mailto:${contact.email}`} className="contact-info__value" icon="external">{contact.email}</SectionLink>
               </li>
               {contactLinks.map(([name, url]) => (
                 <li key={name} className="contact-info__item">
                   <span className="contact-info__label">{name.toUpperCase()}</span>
-                  <a href={url} target="_blank" rel="noreferrer" className="contact-info__value">{url}</a>
+                  <SectionLink to={url} target="_blank" rel="noreferrer" className="contact-info__value" icon="external">{url}</SectionLink>
                 </li>
               ))}
             </ul>

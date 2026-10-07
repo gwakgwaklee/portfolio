@@ -14,9 +14,22 @@ const projects = [
     links: {
       githubUrl: 'https://github.com/example/project-one',
       demoUrl: null,
-      detailUrl: 'https://example.com/project-one/detail.pdf',
       deployUrl: 'https://example.com/project-one',
     },
+    media: [
+      {
+        id: 1,
+        type: 'pdf',
+        title: '프로젝트 결과 보고서',
+        url: 'https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf',
+      },
+      {
+        id: 2,
+        type: 'video',
+        title: '프로젝트 시연 영상',
+        url: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+      },
+    ],
     highlights: [
       '핵심 성과 1: 퍼포먼스 30% 개선',
       '문제 해결: 메모리 릭을 찾아 고정',
@@ -42,9 +55,16 @@ const projects = [
     links: {
       githubUrl: 'https://github.com/example/project-two',
       demoUrl: null,
-      detailUrl: 'https://example.com/project-two/detail.pdf',
       deployUrl: 'https://example.com/project-two',
     },
+    media: [
+      {
+        id: 1,
+        type: 'pdf',
+        title: '프로젝트 진행 보고서',
+        url: 'https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf',
+      },
+    ],
   },
   {
     id: 3,
@@ -61,9 +81,9 @@ const projects = [
     links: {
       githubUrl: 'https://github.com/example/todo-list',
       demoUrl: 'https://example.com/todo-list',
-      detailUrl: null,
       deployUrl: 'https://example.com/todo-list',
     },
+    media: [],
     highlights: [
       '핵심 성과: 로컬 스토리지에 데이터 영구 저장',
     ],
@@ -83,9 +103,53 @@ const projects = [
     links: {
       githubUrl: 'https://github.com/example/blog',
       demoUrl: 'https://example.com/blog',
-      detailUrl: null,
       deployUrl: 'https://example.com/blog',
     },
+    media: [],
+    highlights: [
+      '핵심 성과: SEO 최적화',
+    ],
+  },
+  {
+    id: 5,
+    title: 'Blog',
+    summary: '개인 블로그 웹사이트입니다.',
+    description: 'Spring Boot와 React를 사용하여 구현한 블로그 서비스입니다. 게시글 작성, 수정, 삭제 기능을 제공합니다.',
+    role: 'Full Stack Developer',
+    status: 'Completed',
+    period: {
+      startDate: '2023-06-01',
+      endDate: '2023-06-15',
+    },
+    technologies: ['React', 'Spring Boot', 'MariaDB'],
+    links: {
+      githubUrl: 'https://github.com/example/blog',
+      demoUrl: 'https://example.com/blog',
+      deployUrl: 'https://example.com/blog',
+    },
+    media: [],
+    highlights: [
+      '핵심 성과: SEO 최적화',
+    ],
+  },
+  {
+    id: 6,
+    title: 'Blog',
+    summary: '개인 블로그 웹사이트입니다.',
+    description: 'Spring Boot와 React를 사용하여 구현한 블로그 서비스입니다. 게시글 작성, 수정, 삭제 기능을 제공합니다.',
+    role: 'Full Stack Developer',
+    status: 'Completed',
+    period: {
+      startDate: '2023-06-01',
+      endDate: '2023-06-15',
+    },
+    technologies: ['React', 'Spring Boot', 'MariaDB'],
+    links: {
+      githubUrl: 'https://github.com/example/blog',
+      demoUrl: 'https://example.com/blog',
+      deployUrl: 'https://example.com/blog',
+    },
+    media: [],
     highlights: [
       '핵심 성과: SEO 최적화',
     ],
